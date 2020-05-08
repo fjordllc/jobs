@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  tokenizable: one
+  tokenizable_type: Tokenizable
+  expires_at: 2020-05-08 01:15:04
+  token: MyString
+
+two:
+  tokenizable: two
+  tokenizable_type: Tokenizable
+  expires_at: 2020-05-08 01:15:04
+  token: MyString

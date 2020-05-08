@@ -1,0 +1,7 @@
+= form_with model: new_token_form, url: admin_tokens_path, local: true do |f|
+  = render 'errors', object: f.object
+  p
+    = f.label :email
+    = f.email_field :email
+  p
+    = f.submit 'ログインメール送信'

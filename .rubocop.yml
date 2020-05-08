@@ -1,22 +1,27 @@
+inherit_from:
+  - https://gist.githubusercontent.com/komagata/9ad19373b9f9059ca52e727fbb7f2944/raw/1771a1521d506f16995ca2b30f6c620c4226e06a/ruby.yml
+  - https://gist.githubusercontent.com/komagata/9ad19373b9f9059ca52e727fbb7f2944/raw/04cb6859080d046000a4919d2d439b82bebd320d/rails.yml
+
 require:
-  - rubocop-performance
-  - rubocop-rails
   - rubocop-minitest
 
-AllCops:
-  TargetRubyVersion: 2.6.3
-  # RuboCop has a bunch of cops enabled by default. This setting tells RuboCop
-  # to ignore them, so only the ones explicitly set in this file are enabled.
-  DisabledByDefault: true
-  Exclude:
-    - '**/templates/**/*'
-    - '**/vendor/**/*'
-    - 'app/views/**/*'
-    - 'node_modules/**/*'
-    - 'db/schema.rb'
-    - 'storage/**/*'
-    - 'tmp/**/*'
+Layout/SpaceAroundMethodCallOperator:
+  Enabled: true
 
-Performance:
-  Exclude:
-    - '**/test/**/*'
+Lint/RaiseException:
+  Enabled: true
+
+Lint/StructNewOverride:
+  Enabled: true
+
+Style/ExponentialNotation:
+  Enabled: true
+
+Style/HashEachMethods:
+  Enabled: true
+
+Style/HashTransformKeys:
+  Enabled: true
+
+Style/HashTransformValues:
+  Enabled: true
