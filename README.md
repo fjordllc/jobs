@@ -1,24 +1,9 @@
-# README
+# FJORD JOBS
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+プログラミングスキルのある業務未経験者のための求人サイト。
 
-Things you may want to cover:
+## インストール
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```sh
+$ bin/setup
+```
