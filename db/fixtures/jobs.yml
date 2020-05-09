@@ -1,0 +1,11 @@
+job_1:
+  title: 自社サービスを開発するRailsプログラマー募集
+  description: |-
+    Ruby on Railsを使えるWebプログラマーを募集しています。
+  company: company_1
+
+job_2:
+  title: 自社アプリを開発するiOSプログラマー募集
+  description: |-
+    iOSプログラマーを募集しています。
+  company: company_1

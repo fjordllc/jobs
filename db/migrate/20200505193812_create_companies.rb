@@ -4,6 +4,8 @@ class CreateCompanies < ActiveRecord::Migration[6.0]
   def change
     create_table :companies do |t|
       t.string :email, index: { unique: true }
+      t.string :name, null: false
+      t.text :description
 
       t.timestamps
     end

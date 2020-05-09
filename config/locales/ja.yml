@@ -1,0 +1,22 @@
+ja:
+  activerecord:
+    models:
+      admin: ユーザー
+      company: コース
+      user: プラクティス
+      job: 会社
+      token: コメント
+    attributes:
+      admin:
+        email: Email
+      company:
+        email: Email
+        name: 会社名
+      user:
+        email: Email
+      job:
+        title: タイトル
+        description: 詳細
+      token:
+        token: トークン
+        expires_at: 期限日時

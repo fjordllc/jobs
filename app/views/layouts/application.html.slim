@@ -8,10 +8,11 @@ html[lang="ja"]
     = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
   body
-    h1 FJORD JOBS
+    h1 = link_to 'FJORD JOBS', root_path
     = render 'flash'
     nav
       ul
+        li = link_to '求人一覧', jobs_path
         li = link_to '企業一覧', companies_path
         li
           h2 ユーザー
