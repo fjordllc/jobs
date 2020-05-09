@@ -2,4 +2,6 @@
 
 require 'active_record/fixtures'
 
-ActiveRecord::FixtureSet.create_fixtures 'db/fixtures', %i[admins users companies]
+ActiveRecord::FixtureSet.create_fixtures \
+  'db/fixtures',
+  %i[admins users companies jobs]

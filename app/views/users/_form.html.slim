@@ -1,5 +1,8 @@
 = form_with model: user, local: true do |f|
-  p
-    = f.label :email
-    = f.email_field :email
-  p = f.submit '登録'
+  = render 'errors', object: f.object
+  .form__items
+    .form-item
+      = f.label :email
+      = f.email_field :email
+  .form-actions
+    = f.submit '登録'

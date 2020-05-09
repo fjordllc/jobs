@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   root to: 'home#index'
   resources :users, only: %i[new create]
   resources :companies, only: %i[index show new create]
+  resources :jobs
 
   namespace :admin do
     root to: 'home#index'

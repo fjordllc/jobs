@@ -1,0 +1,11 @@
+= form_with model: job, local: true do |f|
+  = render 'errors', object: f.object
+  .form__items
+    .form-item
+      = f.label :title
+      = f.text_field :title
+    .form-item
+      = f.label :description
+      = f.text_area :description
+  .form-actions
+    = f.submit

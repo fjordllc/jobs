@@ -1,4 +1,7 @@
-h2.catchcopy プログラミングスキルのある業務未経験者のための求人サイト
+h2 求人一覧
+
+- if company_signed_in?
+  p = link_to '求人登録', new_job_path
 
 .jobs
   - @jobs.each do |job|

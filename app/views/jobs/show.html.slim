@@ -1,0 +1,4 @@
+h2 = @job.title
+p = @job.description
+- if company_signed_in?
+  p = link_to '編集', edit_job_path(@job)
