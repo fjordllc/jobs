@@ -18,6 +18,9 @@ gem 'sass-rails', '>= 6'
 gem 'slim-rails'
 gem 'turbolinks', '~> 5'
 gem 'webpacker', '~> 4.0'
+gem 'high_voltage'
+gem 'rack-user_agent'
+gem 'font-awesome-sass', '~> 5.12.0'
 
 group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
