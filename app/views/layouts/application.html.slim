@@ -10,24 +10,5 @@ html[lang="ja"]
   body.is-application(class="#{body_class}")
     h1 = link_to 'FJORD JOBS', root_path
     = render 'flash'
-    nav
-      ul
-        li = link_to '求人一覧', jobs_path
-        li = link_to '企業一覧', companies_path
-        li
-          h2 ユーザー
-          ul
-            - if current_user
-              li = link_to 'ユーザーログアウト', user_sign_out_path, method: :delete
-            - else
-              li = link_to 'ユーザー登録', new_user_path
-              li = link_to 'ユーザーログイン', new_user_token_path
-        li
-          h2 企業
-          ul
-            - if current_company
-              li = link_to '企業ログアウト', company_sign_out_path, method: :delete
-            - else
-              li = link_to '企業登録', new_company_path
-              li = link_to '企業ログイン', new_company_token_path
     = yield
+    = render "/dev/pages_nav"
