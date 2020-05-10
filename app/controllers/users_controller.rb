@@ -3,7 +3,7 @@
 class UsersController < ApplicationController
   def new
     @user = User.new
-    render layout: "auth"
+    render layout: 'auth'
   end
 
   def create

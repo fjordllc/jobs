@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class PagesController < ApplicationController
   include HighVoltage::StaticPage
 
@@ -7,10 +9,10 @@ class PagesController < ApplicationController
 
   def layout_for_page
     case params[:id]
-    when "welcome", "pp", "tos"
-      "lp"
+    when 'welcome', 'pp', 'tos'
+      'lp'
     else
-      "application"
+      'application'
     end
   end
 end

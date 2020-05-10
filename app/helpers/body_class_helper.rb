@@ -40,6 +40,7 @@ module BodyClassHelper
     return 'ios' if request.from_ios?
     return 'android' if android?
     return 'windows-phone' if request.from_windows_phone?
+
     'other-os'
   end
 
@@ -53,7 +54,7 @@ module BodyClassHelper
 
   def basic_body_classes
     if page_classes.present?
-      page_classes  + ' ' + css_hack_classes
+      page_classes + ' ' + css_hack_classes
     else
       css_hack_classes
     end
@@ -71,11 +72,12 @@ module BodyClassHelper
   end
 
   private
-    def need_remove_windows?
-      Woothee.parse(request.user_agent)[:vendor] == 'Microsoft' && request.os.include?('Windows')
-    end
 
-    def android?
-      request.from_android? || request.from_android_tablet?
-    end
+  def need_remove_windows?
+    Woothee.parse(request.user_agent)[:vendor] == 'Microsoft' && request.os.include?('Windows')
+  end
+
+  def android?
+    request.from_android? || request.from_android_tablet?
+  end
 end

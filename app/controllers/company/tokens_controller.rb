@@ -3,7 +3,7 @@
 class Company::TokensController < ApplicationController
   def new
     @new_token_form = NewTokenForm.new
-    render layout: "auth"
+    render layout: 'auth'
   end
 
   def create
