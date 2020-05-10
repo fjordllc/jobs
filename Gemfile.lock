@@ -1,3 +1,11 @@
+GIT
+  remote: git://github.com/brentd/xray-rails.git
+  revision: 4f6cca0cd01417d6be6a774314f941d52c660e4d
+  branch: master
+  specs:
+    xray-rails (0.3.2)
+      rails (>= 3.1.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -296,6 +304,7 @@ DEPENDENCIES
   web-console (>= 3.3.0)
   webdrivers
   webpacker (~> 4.0)
+  xray-rails!
 
 RUBY VERSION
    ruby 2.7.1p83

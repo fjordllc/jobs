@@ -11,6 +11,7 @@ class CompaniesController < ApplicationController
 
   def new
     @company = Company.new
+    render layout: "auth"
   end
 
   def create

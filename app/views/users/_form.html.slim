@@ -1,8 +1,19 @@
 = form_with model: user, local: true do |f|
   = render 'errors', object: f.object
-  .form__items
-    .form-item
-      = f.label :email
-      = f.email_field :email
-  .form-actions
-    = f.submit '登録'
+  .o-card
+    .m-basic-form
+      .m-basic-form__items
+        .m-form-item
+          .m-form-item__start
+            = f.label :email, class: "a-form-label"
+          .m-form-item__end
+            = f.email_field :email, class: "a-text-input is-block"
+      .m-basic-form__actions
+        .m-form-action
+          = f.submit '登録', class: "a-button is-primary is-md is-block"
+      .m-basic-form__nav
+        .m-list
+          .m-list__items
+            .m-list__item.is-ta-center
+              = link_to new_user_token_path, class: "a-text-link" do
+                | ログインはこちら

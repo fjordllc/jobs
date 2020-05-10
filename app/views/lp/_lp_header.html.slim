@@ -1,0 +1,21 @@
+header.o-basic-header
+  .container.is-mxw-100pc
+    .o-basic-header__inner
+      .o-basic-header__start
+        h1.a-brand-logo
+          = link_to root_path, class: "a-brand-logo__link" do
+           | FJORD JOBS
+      .o-basic-header__end
+        .m-inline-list
+          ul.m-inline-list__items
+            - if current_user
+              li.m-list__item
+                = link_to user_sign_out_path, method: :delete, class: "a-text-link" do
+                  | ユーザーログアウト
+            - else
+              li.m-inline-list__item
+                = link_to new_user_path, class: "a-button is-primary is-sm"
+                  | ユーザー登録
+              li.m-inline-list__item
+                = link_to new_user_token_path, class: "a-button is-border-primary is-sm"
+                  | ユーザーログイン

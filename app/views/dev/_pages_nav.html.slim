@@ -1,20 +1,47 @@
-nav
-  ul
-    li = link_to '求人一覧', jobs_path
-    li = link_to '企業一覧', companies_path
-    li
-      h2 ユーザー
-      ul
-        - if current_user
-          li = link_to 'ユーザーログアウト', user_sign_out_path, method: :delete
-        - else
-          li = link_to 'ユーザー登録', new_user_path
-          li = link_to 'ユーザーログイン', new_user_token_path
-    li
-      h2 企業
-      ul
-        - if current_company
-          li = link_to '企業ログアウト', company_sign_out_path, method: :delete
-        - else
-          li = link_to '企業登録', new_company_path
-          li = link_to '企業ログイン', new_company_token_path
+nav.o-dev-pages
+  .o-dev-pages__row
+    .container
+      .m-inline-list
+        h2.m-inline-list__title
+          | ページ
+        ul.m-inline-list__items
+          li.m-inline-list__item
+            = link_to jobs_path, class: "a-text-link" do
+              | 求人一覧
+          li.m-inline-list__item
+            = link_to companies_path, class: "a-text-link" do
+              | 企業一覧
+  .o-dev-pages__row
+    .container
+      .m-inline-list
+        h2.m-inline-list__title
+          | ユーザー
+        ul.m-inline-list__items
+          - if current_user
+            li.m-inline-list__item
+              = link_to user_sign_out_path, method: :delete, class: "a-text-link" do
+                | ユーザーログアウト
+          - else
+            li.m-inline-list__item
+              = link_to new_user_path, class: "a-text-link" do
+                | ユーザー登録
+            li.m-inline-list__item
+              = link_to new_user_token_path, class: "a-text-link" do
+                | ユーザーログイン
+  .o-dev-pages__row
+    .container
+      .m-inline-list
+        h2.m-inline-list__title
+          | 企業
+        ul.m-inline-list__items
+          - if current_company
+            li.m-inline-list__item
+              = link_to company_sign_out_path, method: :delete, class: "a-text-link" do
+                | 企業ログアウト
+          - else
+            li.m-inline-list__item
+              = link_to new_company_path, class: "a-text-link" do
+                | 企業登録
+            li.m-inline-list__item
+              = link_to new_company_token_path, class: "a-text-link" do
+                | 企業ログイン

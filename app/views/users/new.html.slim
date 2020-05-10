@@ -1,2 +1,13 @@
-h2 ユーザー登録
-= render 'form', user: @user
+.t-auth
+  .container.is-sm
+    .t-auth__inner
+      .t-auth__header
+        .a-brand-logo
+          = link_to root_path, class: "a-brand-logo__link" do
+            | FJORD JOBS
+        h1.t-auth__title
+          | ユーザー登録
+      .t-auth__body
+        = render 'form', user: @user
+      footer.t-auth__footer
+        = render "/auth/auth_nav"

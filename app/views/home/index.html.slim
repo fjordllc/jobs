@@ -1,9 +1,19 @@
-h2.catchcopy プログラミングスキルのある業務未経験者のための求人サイト
-
-.jobs
-  - @jobs.each do |job|
-    .job
-      h3.job__title = link_to job.title, job
-      .job_description = job.description
-      - if job.company == current_company
-        .job_actions = link_to '編集', edit_job_path(job)
+.o-basic-main-visual
+  .container
+    .o-basic-main-visual__inner
+      | プログラミングスキルのある業務未経験者のための求人サイト
+.t-lp__contents
+  .m-lp-content
+    .container
+      .m-lp-content__inner
+        .m-lp-content__header
+          h2.m-lp-content__title
+            | 募集
+        .m-lp-content__body
+          .m-lp-content__row
+            - @jobs.each do |job|
+              .job
+                h3.job__title = link_to job.title, job
+                .job_description = job.description
+                - if job.company == current_company
+                  .job_actions = link_to '編集', edit_job_path(job)
