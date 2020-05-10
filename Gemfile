@@ -21,6 +21,7 @@ gem 'webpacker', '~> 4.0'
 gem 'high_voltage'
 gem 'rack-user_agent'
 gem 'font-awesome-sass', '~> 5.12.0'
+gem 'autoprefixer-rails'
 
 group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
