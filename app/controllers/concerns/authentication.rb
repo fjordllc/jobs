@@ -15,24 +15,25 @@ module Authentication
   end
 
   def sign_in(record)
-    type = record.class.to_s
-    session[type] = record.id
+    type = record.class.to_s.underscore
+    session["#{type}_id"] = record.id
   end
 
   def sign_out(tokenizable_class)
-    session[tokenizable_class.to_s] = nil
+    type = tokenizable_class.to_s.underscore
+    session.delete "#{type}_id"
   end
 
   def current_admin
-    @current_admin ||= Admin.find_by(id: session['Admin'])
+    @current_admin ||= Admin.find_by(id: session['admin_id'])
   end
 
   def current_company
-    @current_company ||= Company.find_by(id: session['Company'])
+    @current_company ||= Company.find_by(id: session['company_id'])
   end
 
   def current_user
-    @current_user ||= User.find_by(id: session['User'])
+    @current_user ||= User.find_by(id: session['user_id'])
   end
 
   def admin_signed_in?
@@ -50,21 +51,18 @@ module Authentication
   def require_admin!
     return if current_admin
 
-    redirect_to root_path,
-                flash: { alert: '管理者ログインが必要です。' }
+    redirect_to root_path, alert: '管理者ログインが必要です。'
   end
 
   def require_company!
     return if current_company
 
-    redirect_to root_path,
-                flash: { alert: '企業ログインが必要です。' }
+    redirect_to root_path, alert: '企業ログインが必要です。'
   end
 
   def require_user!
     return if current_user
 
-    redirect_to root_path,
-                flash: { alert: 'ユーザーログインが必要です。' }
+    redirect_to root_path, alert: 'ユーザーログインが必要です。'
   end
 end

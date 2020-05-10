@@ -1,0 +1,40 @@
+doctype html
+html
+  head
+    title EasyLogin
+  body
+    h1 EasyLogin
+
+    h2 Session
+
+    table
+      tr
+        th Class
+        th Status
+        th Action
+      - EmailLogin.classes.each do |klass|
+        - id = session["#{klass.to_s.underscore}_id"]
+        tr
+          td = klass
+          td = id || '-'
+          td
+            - if id
+              = link_to 'ログアウト', "/easy_login/logout?role=#{klass.to_s.downcase}"
+
+    - EmailLogin.classes.each do |klass|
+      h2 = klass
+
+
+      table
+        tr
+          th ID
+          th Email
+          th
+        - klass.all.each do |record|
+          tr
+            td = record.id
+            td = record.email
+            td = link_to "ログイン", "/easy_login/login?#{klass.to_s.downcase}_id=#{record.id}"
+      p = link_to 'ログアウト', "/easy_login/logout?role=#{klass.to_s.downcase}"
+
+    p = link_to '全てログアウト', '/easy_login/logout'
