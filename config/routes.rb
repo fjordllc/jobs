@@ -26,4 +26,10 @@ Rails.application.routes.draw do
     get 'sign_in/:token', to: 'sessions#create', as: :sign_in
     delete 'sign_out', to: 'sessions#destroy', as: :sign_out
   end
+
+  if Rails.env.development?
+    get 'easy_login', to: 'easy_login#show'
+    get 'easy_login/login', to: 'easy_login#login'
+    get 'easy_login/logout', to: 'easy_login#logout'
+  end
 end
