@@ -7,7 +7,7 @@ html[lang="ja"]
     = csp_meta_tag
     = stylesheet_link_tag 'admin', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_pack_tag 'admin', 'data-turbolinks-track': 'reload'
-  body
+  body.is-admin(class="#{body_class}")
     h1 FJORD JOBS管理ページ
     = render 'flash'
     nav

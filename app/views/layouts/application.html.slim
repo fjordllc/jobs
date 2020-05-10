@@ -7,7 +7,7 @@ html[lang="ja"]
     = csp_meta_tag
     = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
-  body
+  body.is-application(class="#{body_class}")
     h1 = link_to 'FJORD JOBS', root_path
     = render 'flash'
     nav
