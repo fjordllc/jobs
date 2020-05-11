@@ -1,6 +1,6 @@
 doctype html
-html[lang="ja"]
-  = render "head", title: "FJORD JOBS管理ページ"
+html[lang='ja']
+  = render 'head', title: 'FJORD JOBS管理ページ'
   body.is-admin(class="#{body_class}")
     h1 FJORD JOBS管理ページ
     = render 'flash'
@@ -17,4 +17,4 @@ html[lang="ja"]
             - else
               li = link_to '管理者ログイン', new_admin_token_path
     = yield
-    = render "/dev/pages_nav"
+    = render 'dev/pages_nav'

@@ -19,7 +19,7 @@
                       .o-horizontal-posts__item
                         = link_to job, class: "m-posts-post" do
                           .m-posts-post__row
-                            = image_tag("https://via.placeholder.com/500", class: "m-posts-post__image")
+                            = image_tag "https://via.placeholder.com/500", class: "m-posts-post__image"
                           .m-posts-post__row
                             .m-post-attributes
                               .m-post-attributes__col
@@ -34,6 +34,6 @@
                                           .m-post-attributes__author
                                             = image_tag("https://via.placeholder.com/100", class: "a-circle-image")
                                             .m-post-attributes__author-name
-                                              | 会社名ああああああ
+                                              = job.company.name
                         - if job.company == current_company
                           .job_actions = link_to '編集', edit_job_path(job)

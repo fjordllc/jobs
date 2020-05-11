@@ -3,11 +3,11 @@
     .t-auth__inner
       .t-auth__header
         .a-brand-logo
-          = link_to root_path, class: "a-brand-logo__link" do
+          = link_to root_path, class: 'a-brand-logo__link' do
             | FJORD JOBS
         h1.t-auth__title
           | ユーザーログイン
       .t-auth__body
         = render 'form', new_token_form: @new_token_form
       footer.t-auth__footer
-        = render "/auth/auth_nav"
+        = render 'auth/auth_nav'

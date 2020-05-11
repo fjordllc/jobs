@@ -1,9 +1,10 @@
 # frozen_string_literal: true
 
 class Company::TokensController < ApplicationController
+  layout 'auth'
+
   def new
     @new_token_form = NewTokenForm.new
-    render layout: 'auth'
   end
 
   def create
