@@ -6,12 +6,16 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby RUBY_VERSION
 
 gem 'active_decorator'
+gem 'autoprefixer-rails'
 gem 'bootsnap', '>= 1.4.2', require: false
+gem 'font-awesome-sass', '~> 5.12.0'
+gem 'high_voltage'
 gem 'image_processing', '~> 1.2'
 gem 'jbuilder', '~> 2.7'
 gem 'meta-tags'
 gem 'pg', '>= 0.18', '< 2.0'
 gem 'puma', '~> 4.1'
+gem 'rack-user_agent'
 gem 'rails', '~> 6.0.3'
 gem 'rails-i18n'
 gem 'sass-rails', '>= 6'
@@ -34,6 +38,7 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'web-console', '>= 3.3.0'
+  gem 'xray-rails', git: 'git://github.com/brentd/xray-rails.git', branch: 'master'
 end
 
 group :test do

@@ -1,0 +1,9 @@
+doctype html
+html[lang='ja']
+  = render 'head', title: 'FJORD JOBS'
+  body.is-lp(class="#{body_class}")
+    .t-lp
+      = render 'lp/lp_header'
+      = yield
+      = render 'lp/lp_footer'
+    = render 'dev/pages_nav'

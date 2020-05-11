@@ -1,0 +1,16 @@
+.o-dev-pages
+  +position(fixed, left 0, bottom 0)
+  background-color: rgba(black, .6)
+  font-size: .875rem
+  +padding(vertical, 1em)
+  .m-inline-list__title
+    margin-bottom: .5em
+    +text-block(1em 1.4, 600 $reversal-text)
+  .a-text-link
+    color: $reversal-text
+
+.o-dev-pages__row
+  &:not(:last-child)
+    padding-bottom: 1em
+    margin-bottom: 1em
+    border-bottom: dashed 1px rgba(white, .2)

@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 class User::TokensController < ApplicationController
+  layout 'auth'
+
   def new
     @new_token_form = NewTokenForm.new
   end

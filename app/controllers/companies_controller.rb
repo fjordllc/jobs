@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 class CompaniesController < ApplicationController
+  layout 'auth', only: %i[new create]
+
   def index
     @companies = Company.order(:created_at)
   end

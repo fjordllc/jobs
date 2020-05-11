@@ -1,0 +1,24 @@
+.m-post-attributes
+  display: flex
+
+.m-post-attributes__image
+  +size(4em)
+  border-radius: 50%
+
+.m-post-attributes__row
+  &:not(:last-child)
+    margin-bottom: .375em
+
+.m-post-attributes__title
+  +text-block(1em 1.38, 600)
+  margin-bottom: -.125em
+
+.m-post-attributes__date
+  +text-block(1.45, $muted-text)
+
+.m-post-attributes__author
+  +text-block(1.45, $muted-text flex)
+  align-items: center
+  .a-circle-image
+    +size(1.428em)
+    margin-right: .25em

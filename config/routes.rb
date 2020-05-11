@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   resources :users, only: %i[new create]
   resources :companies, only: %i[index show new create]
   resources :jobs
+  get "pages/*id" => 'pages#show', as: :static_page, format: false
 
   namespace :admin do
     root to: 'home#index'

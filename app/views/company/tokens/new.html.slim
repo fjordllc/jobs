@@ -1,2 +1,13 @@
-h2 企業ログイン
-= render 'form', new_token_form: @new_token_form
+.t-auth
+  .container.is-sm
+    .t-auth__inner
+      .t-auth__header
+        .a-brand-logo
+          = link_to root_path, class: "a-brand-logo__link" do
+            | FJORD JOBS
+        h1.t-auth__title
+          | 企業ログイン
+      .t-auth__body
+        = render 'form', new_token_form: @new_token_form
+      footer.t-auth__footer
+        = render "/auth/auth_nav"

@@ -1,0 +1,6 @@
+doctype html
+html[lang='ja']
+  = render 'head', title: 'FJORD JOBS'
+  body.is-auth(class="#{body_class}")
+    = yield
+    = render 'dev/pages_nav'

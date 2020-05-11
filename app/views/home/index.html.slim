@@ -1,9 +1,39 @@
-h2.catchcopy プログラミングスキルのある業務未経験者のための求人サイト
-
-.jobs
-  - @jobs.each do |job|
-    .job
-      h3.job__title = link_to job.title, job
-      .job_description = job.description
-      - if job.company == current_company
-        .job_actions = link_to '編集', edit_job_path(job)
+.o-basic-main-visual
+  .container
+    .o-basic-main-visual__inner
+      | プログラミングスキルのある業務未経験者のための求人サイト
+.t-lp__contents
+  .m-lp-content
+    .container
+      .m-lp-content__inner
+        .m-lp-content__header
+          h2.m-lp-content__title
+            | 募集
+        .m-lp-content__body
+          .m-lp-content__row
+            .o-horizontal-posts
+              .o-horizontal-posts__items
+                .t-grids
+                  - @jobs.each do |job|
+                    .t-grids__item.is-col-4
+                      .o-horizontal-posts__item
+                        = link_to job, class: "m-posts-post" do
+                          .m-posts-post__row
+                            = image_tag "https://via.placeholder.com/500", class: "m-posts-post__image"
+                          .m-posts-post__row
+                            .m-post-attributes
+                              .m-post-attributes__col
+                                .m-post-attributes__row
+                                  h3.m-post-attributes__title
+                                    = job.title
+                                .m-post-attributes__row
+                                  .m-post-attributes__list
+                                    .m-inline-list
+                                      .m-inline-list__items
+                                        .m-inline-list__item
+                                          .m-post-attributes__author
+                                            = image_tag("https://via.placeholder.com/100", class: "a-circle-image")
+                                            .m-post-attributes__author-name
+                                              = job.company.name
+                        - if job.company == current_company
+                          .job_actions = link_to '編集', edit_job_path(job)
