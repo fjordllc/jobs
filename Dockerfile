@@ -1,5 +1,6 @@
-FROM ruby:2.7.1
+FROM ruby:2.6.6
 ENV LANG C.UTF-8
+ENV RAILS_ENV production
 
 RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - \
   && echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list
@@ -17,3 +18,10 @@ RUN yarn install
 
 WORKDIR /app
 ADD . /app
+
+RUN SECRET_KEY_BASE=dummy bin/rails assets:precompile
+
+ENV PORT 3000
+EXPOSE 3000
+
+CMD bin/rails server

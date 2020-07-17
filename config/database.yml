@@ -80,8 +80,12 @@ test:
 #   production:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
+#production:
+#  <<: *default
+#  database: jobs_production
+#  host: /tmp/jobs-281105:asia-northeast1:jobs
+#  username: user
+#  password: hiNgeigheiC8ruez
 production:
   <<: *default
   database: jobs_production
-  username: jobs
-  password: <%= ENV['DATABASE_PASSWORD'] %>
