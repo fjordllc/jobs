@@ -10,7 +10,7 @@ gem 'autoprefixer-rails'
 gem 'bootsnap', '>= 1.4.2', require: false
 gem 'font-awesome-sass', '~> 5.12.0'
 gem 'high_voltage'
-gem 'image_processing', '~> 1.2'
+gem 'image_processing', '~> 1.12'
 gem 'jbuilder', '~> 2.7'
 gem 'meta-tags'
 gem 'pg', '>= 0.18', '< 2.0'
